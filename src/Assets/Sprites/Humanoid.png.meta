@@ -1,0 +1,596 @@
+fileFormatVersion: 2
+guid: e020c5afbc1c2c343b8862945c197eca
+timeCreated: 1517050637
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Humanoid_0
+    21300002: Humanoid_1
+    21300004: Humanoid_2
+    21300006: Humanoid_3
+    21300008: Humanoid_4
+    21300010: Humanoid_5
+    21300012: Humanoid_6
+    21300014: Humanoid_7
+    21300016: Humanoid_8
+    21300018: Humanoid_9
+    21300020: Humanoid_10
+    21300022: Humanoid_11
+    21300024: Humanoid_12
+    21300026: Humanoid_13
+    21300028: Humanoid_14
+    21300030: Humanoid_15
+    21300032: Humanoid_16
+    21300034: Humanoid_17
+    21300036: Humanoid_18
+    21300038: Humanoid_19
+    21300040: Humanoid_20
+    21300042: Humanoid_21
+    21300044: Humanoid_22
+    21300046: Humanoid_23
+    21300048: Humanoid_24
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Humanoid_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_13
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_21
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_22
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_23
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Humanoid_24
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline:
+    - - {x: -70, y: -58}
+      - {x: -75, y: -66}
+      - {x: -75, y: -80}
+      - {x: -49, y: -80}
+      - {x: -49, y: -70}
+      - {x: -54, y: -58}
+    - - {x: -36, y: -49}
+      - {x: -40, y: -50}
+      - {x: -40, y: -80}
+      - {x: -19, y: -80}
+      - {x: -19, y: -54}
+      - {x: -21, y: -49}
+    - - {x: -14, y: -80}
+      - {x: 17, y: -80}
+      - {x: 17, y: -19}
+      - {x: -13, y: -19}
+      - {x: -14, y: -23}
+    - - {x: 26, y: 6}
+      - {x: 17, y: 1}
+      - {x: 17, y: -80}
+      - {x: 50, y: -80}
+      - {x: 50, y: -15}
+      - {x: 47, y: 6}
+    - - {x: 44, y: -80}
+      - {x: 48, y: -80}
+      - {x: 48, y: -77}
+      - {x: 45, y: -76}
+      - {x: 43, y: -78}
+    - - {x: 59, y: -17}
+      - {x: 51, y: -20}
+      - {x: 50, y: -41}
+      - {x: 54, y: -42}
+      - {x: 57, y: -42}
+      - {x: 59, y: -41}
+      - {x: 50, y: -53}
+      - {x: 50, y: -71}
+      - {x: 51, y: -74}
+      - {x: 56, y: -80}
+      - {x: 77, y: -80}
+      - {x: 80, y: -79}
+      - {x: 80, y: -29}
+      - {x: 74, y: -17}
+    - - {x: -52, y: -25}
+      - {x: -67, y: -25}
+      - {x: -75, y: -28}
+      - {x: -71, y: -38}
+      - {x: -69, y: -40}
+      - {x: -65, y: -40}
+      - {x: -73, y: -40}
+      - {x: -75, y: -42}
+      - {x: -75, y: -47}
+      - {x: -73, y: -49}
+      - {x: -49, y: -49}
+      - {x: -49, y: -35}
+      - {x: -50, y: -28}
+    - - {x: -37, y: -25}
+      - {x: -39, y: -30}
+      - {x: -39, y: -38}
+      - {x: -37, y: -40}
+      - {x: -40, y: -43}
+      - {x: -40, y: -47}
+      - {x: -39, y: -49}
+      - {x: -17, y: -49}
+      - {x: -17, y: -27}
+      - {x: -23, y: -25}
+    - - {x: -59, y: 47}
+      - {x: -79, y: 47}
+      - {x: -79, y: -17}
+      - {x: -56, y: -17}
+      - {x: -51, y: -9}
+      - {x: -51, y: 35}
+      - {x: -54, y: 44}
+    - - {x: -41, y: 79}
+      - {x: -43, y: 75}
+      - {x: -49, y: 51}
+      - {x: -49, y: 1}
+      - {x: -42, y: -17}
+      - {x: -25, y: -17}
+      - {x: -21, y: -11}
+      - {x: -21, y: 79}
+    - - {x: 5, y: 15}
+      - {x: -5, y: 15}
+      - {x: -4, y: 15}
+      - {x: -2, y: 16}
+      - {x: 11, y: 18}
+      - {x: 11, y: 46}
+      - {x: 5, y: 47}
+      - {x: -5, y: 47}
+      - {x: -10, y: 42}
+      - {x: -16, y: 34}
+      - {x: -16, y: -1}
+      - {x: -13, y: -17}
+      - {x: 6, y: -17}
+      - {x: 11, y: -12}
+      - {x: 11, y: -3}
+      - {x: 9, y: 12}
+    - - {x: 53, y: -17}
+      - {x: 79, y: -17}
+      - {x: 79, y: 1}
+      - {x: 78, y: 5}
+      - {x: 72, y: 7}
+      - {x: 58, y: 7}
+      - {x: 53, y: -3}
+    - - {x: 22, y: 79}
+      - {x: 22, y: 18}
+      - {x: 23, y: 15}
+      - {x: 43, y: 15}
+      - {x: 43, y: 79}
+    - - {x: 56, y: 79}
+      - {x: 50, y: 57}
+      - {x: 50, y: 33}
+      - {x: 56, y: 15}
+      - {x: 75, y: 15}
+      - {x: 77, y: 20}
+      - {x: 77, y: 77}
+      - {x: 72, y: 79}
+    - - {x: -57, y: 80}
+      - {x: -69, y: 80}
+      - {x: -74, y: 77}
+      - {x: -74, y: 59}
+      - {x: -73, y: 48}
+      - {x: -70, y: 47}
+      - {x: -58, y: 47}
+      - {x: -53, y: 55}
+      - {x: -53, y: 72}
+    - - {x: 7, y: 80}
+      - {x: -5, y: 80}
+      - {x: -10, y: 77}
+      - {x: -10, y: 59}
+      - {x: -9, y: 48}
+      - {x: -6, y: 47}
+      - {x: 6, y: 47}
+      - {x: 11, y: 55}
+      - {x: 11, y: 72}
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
