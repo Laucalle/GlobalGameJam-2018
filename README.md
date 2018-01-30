@@ -1,4 +1,4 @@
-# IAD
-Internet Applications Development at UGR
+# Global Game Jam 2018
+Game project created around the topic 'Transmission' for Global Game Jam 2018.
 
-This repository hosts projects for IAD course by Laura Calle, mainly using python.
+TCP is a puzzle game where you play as a sentient robot, transferring your conscience to different devices in order to make your way to the exit. Have fun! :D
