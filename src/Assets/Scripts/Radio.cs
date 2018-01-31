@@ -8,27 +8,28 @@ public class Radio : MonoBehaviour {
 
 	public float guard_power;
 	public float max_power;
-	public GameObject SonSprite;
 	public AudioSource radioAudio;
 	public AudioClip radioOnOffClip;
 	public AudioClip radioActivaClip;
 	public LayerMask blockingLayer;
+	public Text controles;
 
 	private bool activo;
 	private Animator animator;
 	private BoxCollider2D boxCollider;
-	private bool MensajeEnviado;
-	public Text controles;
+	private float side_size;
 
 
 	// Use this for initialization
 	void Start () {
-		MensajeEnviado = false;
 		activo = false;
 		radioAudio = GetComponent<AudioSource> ();
 		radioAudio.volume = 0.5f;
-		animator = SonSprite.GetComponent<Animator> ();
+		animator = GetComponent<Animator> ();
 		boxCollider = GetComponent<BoxCollider2D> ();
+
+		side_size = GetComponent<SpriteRenderer> ().bounds.size.x;
+		boxCollider.size.Set (side_size, side_size);
 	}
 	
 	// Update is called once per frame
@@ -91,7 +92,7 @@ public class Radio : MonoBehaviour {
 	public void CallGuards() {
 		bool[] direcciones_libres = {true, true, true, true};
 		bool found = false;
-		int dis = 1, dis_limit = 7;
+		float dis = side_size, dis_limit = 50*side_size;
 		Vector2 start = transform.position, pos_relativa, end;
 		RaycastHit2D hit;
 
@@ -128,7 +129,7 @@ public class Radio : MonoBehaviour {
 
 				}
 			}
-			dis++;
+			dis += side_size;
 		}
 
 		boxCollider.enabled = true;

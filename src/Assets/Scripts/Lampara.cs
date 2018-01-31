@@ -20,6 +20,9 @@ public class Lampara : MonoBehaviour {
 		animator = GetComponent<Animator> ();
 		lampSource = GetComponent<AudioSource> ();
 		lampSource.volume = 0.15f;
+
+		float side_size = GetComponent<SpriteRenderer> ().bounds.size.x;
+		GetComponent<BoxCollider2D> ().size.Set (side_size, side_size);
 	}
 	
 	// Update is called once per frame

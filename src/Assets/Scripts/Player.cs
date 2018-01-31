@@ -11,15 +11,7 @@ public class Player : MonoBehaviour {
 	public float moveTime = 0.1f;
 	public LayerMask blockingLayer;
 	public LayerMask waterLayer;
-	
-	private bool death;
-	private BoxCollider2D boxCollider;
-	private Rigidbody2D rb2D;
-	private float inverseMoveTime;
-	private Animator animator;
-	private float delayCounter = 0.0f;
-	private bool activated;
-	private AudioSource audioSource;
+
 	public AudioClip playerStep;
 	public AudioClip playerDie;
 	public AudioClip playerWave;
@@ -29,6 +21,15 @@ public class Player : MonoBehaviour {
 	public float SilenceTime;
 	public Canvas canvas;
 
+	private bool death;
+	private BoxCollider2D boxCollider;
+	private Rigidbody2D rb2D;
+	private float inverseMoveTime;
+	private Animator animator;
+	private float delayCounter = 0.0f;
+	private bool activated;
+	private AudioSource audioSource;
+	private float side_size;
 
 	// Use this for initialization
 	void Start () {
@@ -40,6 +41,10 @@ public class Player : MonoBehaviour {
 		death = false;
 		audioSource = GetComponent<AudioSource> ();
 		controles.text = "ARROWS: move\n CLICK: transfer";
+
+		side_size = GetComponent<SpriteRenderer> ().bounds.size.x;
+		float collider_size = (float) (side_size - 0.1);
+		GetComponent<BoxCollider2D> ().size.Set (collider_size, collider_size);
 	}
 
 	void Activar() {
@@ -101,6 +106,8 @@ public class Player : MonoBehaviour {
 				RaycastHit2D hit;
 
 				if (horizontal != 0 || vertical != 0) {
+					horizontal *= (int) side_size;
+					vertical *= (int) side_size;
 					Move (horizontal, vertical, out hit);
 					delayCounter = 0.0f;
 				}
@@ -153,6 +160,7 @@ public class Player : MonoBehaviour {
 	public void Silenciar(){
 		StartCoroutine (CoSilenciar ());
 	}
+
 	IEnumerator CoSilenciar(){
 
 		yield return new WaitForSeconds (exitClip.length - 0.6f);

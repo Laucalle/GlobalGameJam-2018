@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Guardia : MonoBehaviour {
-	public BoxCollider2D boxCollider;
 	public LayerMask blockingLayer;
-	public Rigidbody2D rb2D;
 	public float moveTime = 0.1f;
-	public Animator animator;
 	public float umbral;
 	public AudioClip GuardStepClip;
 
@@ -20,6 +17,10 @@ public class Guardia : MonoBehaviour {
 	private float inverseMoveTime;
 	private bool dead;
 	private bool cambiandoDeCharco;
+	private float side_size;
+	private Rigidbody2D rb2D;
+	private BoxCollider2D boxCollider;
+	private Animator animator;
 
 	// Use this for initialization
 	void Start () {
@@ -31,6 +32,10 @@ public class Guardia : MonoBehaviour {
 		dead = false;
 		charcoActual = null;
 		cambiandoDeCharco = false;
+
+		side_size = GetComponent<SpriteRenderer> ().bounds.size.x;
+		float collider_size = (float) (side_size - 0.1);
+		GetComponent<BoxCollider2D> ().size.Set (collider_size, collider_size);
 	}
 		
 	void Update () {
@@ -51,7 +56,7 @@ public class Guardia : MonoBehaviour {
 
 				Vector2 dir_norm = dir;
 				dir_norm.Normalize ();
-				Vector2 dir_opuesta = new Vector2 (-dir_norm.x, -dir_norm.y);
+				Vector2 dir_opuesta = new Vector2 (-dir_norm.x * side_size, -dir_norm.y * side_size);
 
 				Vector2 start = transform.position;
 				Vector2 end = start + dir;
@@ -64,11 +69,9 @@ public class Guardia : MonoBehaviour {
 				boxCollider.enabled = true;
 
 				hit.transform.gameObject.SendMessage ("ShutDown");
-
 				MoveForSeconds (1f);
 
 				if (dir_norm.y > 0) {
-					//UpdateState ("GuardPausa");
 					UpdateState ("GuardIdleBackwards");
 				} else {
 					UpdateState ("GuardPausa");

@@ -7,15 +7,14 @@ public class AguaScript : MonoBehaviour {
 	private bool mojado;
 	private GameObject textura;
 
-	// Use this for initialization
 	void Start () {
 		mortal = false;
 		mojado = true;
+		float side_size = GetComponent<SpriteRenderer> ().bounds.size.x;
+		GetComponent<BoxCollider2D> ().size.Set (side_size, side_size);
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
-		//print (mortal.ToString ());
 	}
 
 	public void Secar(){
@@ -30,13 +29,5 @@ public class AguaScript : MonoBehaviour {
 
 	public bool getMotalidad() {
 		return mortal;
-	}
-
-	public void OnTriggerStay2D(Collider2D collider2D){
-		/*print (mortal.ToString ());
-
-		if (mortal && collider2D.gameObject.tag == "Guard")
-			collider2D.gameObject.SendMessage ("Die");
-		print (collider2D.gameObject.tag.ToString ());*/
 	}
 }
