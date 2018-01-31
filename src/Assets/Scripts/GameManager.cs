@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour {
 			}
 		}
 
-		if (current.tag == "Player" && current.GetComponent<Player>().Dead()) {
+		if (current.tag == "Player" && current.GetComponent<PlayerScript>().Dead()) {
 			animator.Play ("GameOver");
 			if (restartTimer == 0) {
 				Silenciar ();
