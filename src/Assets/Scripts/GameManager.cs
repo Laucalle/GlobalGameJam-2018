@@ -78,11 +78,26 @@ public class GameManager : MonoBehaviour {
 			restartTimer += Time.deltaTime;
 
 			if (restartTimer >= restartDelay) {
-				SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+				RestartScene ();
 			}
 
 		}
+
+		if (Input.GetKey("r") && SceneManager.GetActiveScene () != SceneManager.GetSceneByBuildIndex(0) && 
+				SceneManager.GetActiveScene () != SceneManager.GetSceneByBuildIndex(SceneManager.sceneCountInBuildSettings - 1) ) {
+			RestartScene ();
+		}
+
+		if (Input.GetKey ("escape")) {
+			ExitGame ();
+		}
 	}
 
-
+	private void RestartScene() {
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+	}
+		
+	private void ExitGame() {
+		Application.Quit ();
+	}
 }
