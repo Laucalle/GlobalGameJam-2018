@@ -398,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 755f2e5b8eb79aa4f98292da999f2b35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombreEscena: main
+  nombreEscena: Level1
   parallaxSpeed: 0.02
   farIntro: {fileID: 804112660}
   audioSource: {fileID: 0}
