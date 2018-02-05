@@ -89,49 +89,58 @@ public class RadioScript : MonoBehaviour {
 		}
 	}
 
-	public void CallGuards() {
-		bool[] direcciones_libres = {true, true, true, true};
-		bool found = false;
-		float dis = side_size, dis_limit = 50*side_size;
-		Vector2 start = transform.position, pos_relativa, end;
-		RaycastHit2D hit;
+    public void CallGuards()
+    {
+        List<Vector2> nodesToCheck = new List<Vector2>();
+        List<Vector2> checkedNodes = new List<Vector2>();
+        List<Vector2> guardsPositions = new List<Vector2>();
+        Vector2 start = transform.position;
+        nodesToCheck.Add(start + Vector2.right);
+        nodesToCheck.Add(start + Vector2.left);
+        nodesToCheck.Add(start + Vector2.up);
+        nodesToCheck.Add(start + Vector2.down);
+      
+        while (nodesToCheck.Count != 0 )
+        {
+            Vector2 current = nodesToCheck[0];
+            Vector2[] directions =
+            {
+                 Vector2.left,
+                 Vector2.right,
+                 Vector2.up,
+                 Vector2.down
+            };
+         
+            for (int i = 0; i < 4; i++)
+            {
+                Vector2 end = current + directions[i];
+                RaycastHit2D hit = Physics2D.Linecast(current,end, blockingLayer);
 
-		boxCollider.enabled = false;
 
-		while (dis < dis_limit && !found) {
-			for (int i = 0; i < 4; i++) {
-				if (direcciones_libres[i]) {
-					
-					if (i == 0) {
-						pos_relativa = new Vector2 (0, dis);
-					} else if (i == 1) {
-						pos_relativa = new Vector2 (dis, 0);
-					} else if (i == 2) {
-						pos_relativa = new Vector2 (0, -dis);
-					} else {
-						pos_relativa = new Vector2 (-dis, 0);
-					}
 
-					end = start + pos_relativa;
-					hit = Physics2D.Linecast(start, end, blockingLayer);
-
-					if (hit.transform != null) {
-						if (hit.transform.tag == "Guard" && (!hit.transform.gameObject.GetComponent<GuardiaScript> ().isDead ()) ) {
-							found = true;
-							boxCollider.enabled = true;
-							pos_relativa.Set (-pos_relativa.x, -pos_relativa.y);
-							Vector3 param = new Vector3 (pos_relativa.x, pos_relativa.y, radioAudio.volume);
-							hit.transform.gameObject.SendMessage ("Move", param);
-						} else {
-							direcciones_libres [i] = false;
-						}
-					}
-
-				}
-			}
-			dis += side_size;
-		}
-
-		boxCollider.enabled = true;
-	}
+                if (!checkedNodes.Contains(end))
+                {
+                    if (hit.transform == null)
+                    {
+                        if ((end.x > 0) && (end.y > 0) && (end.x < 9) && (end.y < 9))
+                        {
+                            nodesToCheck.Add(end);
+                        }
+                    }
+                    else if (hit.transform.tag == "Guard" && (!hit.transform.gameObject.GetComponent<GuardiaScript>().isDead()) && (!guardsPositions.Contains(end)))
+                    {
+                        /*
+                        boxCollider.enabled = true;
+                        Vector3 param = new Vector3(transform.position.x, transform.position.y, radioAudio.volume);
+                        hit.transform.gameObject.SendMessage("Move", param);
+                        */
+                        guardsPositions.Add(end);
+                        Debug.Log("Guard found at " + end.x.ToString() + " , " + end.y.ToString());
+                    }
+                }
+            }
+            nodesToCheck.Remove(current);
+            checkedNodes.Add(current);
+        }
+    }
 }
