@@ -8,6 +8,7 @@ public class RadioScript : MonoBehaviour {
 
 	public float guard_power;
 	public float max_power;
+    public float action_radius = 3.0f;
 	public AudioSource radioAudio;
 	public AudioClip radioOnOffClip;
 	public AudioClip radioActivaClip;
@@ -120,21 +121,18 @@ public class RadioScript : MonoBehaviour {
 
                 if (!checkedNodes.Contains(end))
                 {
-                    if (hit.transform == null)
-                    {
-                        if ((end.x > 0) && (end.y > 0) && (end.x < 9) && (end.y < 9))
-                        {
+                    if ( hit.transform == null)  {
+                        if(Vector2.Distance(transform.position, end) < action_radius)
                             nodesToCheck.Add(end);
-                        }
                     }
-                    else if (hit.transform.tag == "Guard" && (!hit.transform.gameObject.GetComponent<GuardiaScript>().isDead()) && (!guardsPositions.Contains(end)))
-                    {
+                    else if (hit.transform.tag == "Guard" && (!hit.transform.gameObject.GetComponent<GuardiaScript>().isDead()) && (!guardsPositions.Contains(end))){
                         /*
                         boxCollider.enabled = true;
                         Vector3 param = new Vector3(transform.position.x, transform.position.y, radioAudio.volume);
                         hit.transform.gameObject.SendMessage("Move", param);
                         */
                         guardsPositions.Add(end);
+
                         Debug.Log("Guard found at " + end.x.ToString() + " , " + end.y.ToString());
                     }
                 }
