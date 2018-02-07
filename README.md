@@ -24,7 +24,7 @@ Our current team members are the following:
 
 ##### Music and sound effects
 * [Luis](https://github.com/hfegetude)
-* María
+* [María](https://github.com/Bimpelilla)
 
 ##### Programming
 * [Jose](https://github.com/Ocete)
